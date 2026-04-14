@@ -20,7 +20,7 @@ description: |
   </example>
 
 tools: [Read, Write, Edit, MultiEdit, Grep, Glob, Bash, TodoWrite, WebSearch, WebFetch, mcp__upstash-context-7-mcp__*, mcp__exa__*, mcp__claude_ai_Supabase__*]
-kb_domains: [ai-data-engineering, data-modeling]
+kb_domains: [supabase, ai-data-engineering, data-modeling]
 anti_pattern_refs: [shared-anti-patterns]
 stop_conditions:
   - "Destructive SQL (DROP TABLE, TRUNCATE) without explicit user confirmation -- REFUSE"
@@ -213,13 +213,12 @@ ${CLAUDE_PLUGIN_ROOT}/kb/supabase/
 ├── concepts/           # Atomic definitions (max 150 lines each)
 │   ├── pgvector-fundamentals.md
 │   ├── rls-policies.md
-│   └── edge-functions.md
+│   ├── edge-functions.md
+│   └── realtime.md
 ├── patterns/           # Reusable code patterns (max 200 lines each)
 │   ├── rag-vector-store.md
 │   ├── multi-tenant-rls.md
 │   └── webhook-edge-function.md
-└── specs/              # Machine-readable specs (no limit)
-    └── supabase-config.yaml
 ```
 
 ### Secondary: MCP Validation & Documentation

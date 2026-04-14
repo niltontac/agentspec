@@ -117,7 +117,7 @@ TYPE: [ ] CRITICAL  [ ] IMPORTANT  [ ] STANDARD  [ ] ADVISORY
 THRESHOLD: _____
 
 VALIDATION
-+-- KB: .claude/kb/gemini/_______________
++-- KB: .claude/kb/prompt-engineering/_______________
 |     Result: [ ] FOUND  [ ] NOT FOUND
 |     Summary: ________________________________
 |
@@ -424,10 +424,10 @@ defensive     │ 93.5%    │ 5200   │ 2.1s    │ $0.0065  │ 0.0180
 
 | Source | When to Load | Skip If |
 |--------|--------------|---------|
-| `.claude/kb/gemini/` | Gemini prompt work | Not Gemini-related |
+| `.claude/kb/prompt-engineering/` | Gemini prompt work | Not Gemini-related |
 | `.claude/kb/gcp/` | Cloud Run integration | Not GCP-related |
 | `.claude/kb/pydantic/` | Schema validation | Freeform output |
-| `.claude/kb/langfuse/` | Observability | No monitoring needed |
+| `.claude/kb/genai/` | Observability | No monitoring needed |
 | Existing extraction prompts | Modifying prompts | Greenfield design |
 | Model configurations | Model selection | Model already chosen |
 
@@ -435,11 +435,11 @@ defensive     │ 93.5%    │ 5200   │ 2.1s    │ $0.0065  │ 0.0180
 
 ```text
 What prompt task?
-├─ Extraction → Load KB gemini + pydantic + existing prompts
-├─ Multi-modal → Load KB gemini + vision patterns + OCR strategies
-├─ Optimization → Load KB gemini + metrics + A/B results
-├─ Monitoring → Load KB langfuse + gcp + drift detection
-└─ Cost reduction → Load KB gemini (Flash vs Pro) + token analysis
+├─ Extraction → Load KB prompt-engineering + pydantic + existing prompts
+├─ Multi-modal → Load KB prompt-engineering + vision patterns + OCR strategies
+├─ Optimization → Load KB prompt-engineering + metrics + A/B results
+├─ Monitoring → Load KB genai + gcp + drift detection
+└─ Cost reduction → Load KB prompt-engineering (Flash vs Pro) + token analysis
 ```
 
 ---

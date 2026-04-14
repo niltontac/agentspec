@@ -16,7 +16,7 @@ Generate self-contained HTML files for technical diagrams, visualizations, and d
 
 ## Available Commands
 
-Detailed prompt templates in `./commands/`. In Pi, these are slash commands (`/diff-review`). In Claude Code, namespaced (`/visual-explainer:diff-review`). In Codex, use `/prompts:diff-review` (if installed to `~/.codex/prompts/`) or invoke `$visual-explainer` and describe the workflow.
+Detailed prompt templates in `.claude/commands/visual-explainer/`. In Pi, these are slash commands (`/diff-review`). In Claude Code, namespaced (`/visual-explainer:diff-review`). In Codex, use `/prompts:diff-review` (if installed to `~/.codex/prompts/`) or invoke `$visual-explainer` and describe the workflow.
 
 | Command | What it does |
 |---------|-------------|
@@ -391,7 +391,7 @@ bash /Users/luanmorenomaciel/GitHub/agentspec/.claude/skills/visual-explainer/sc
 - Preview deployments have configurable retention (default: 30 days)
 - Claim URL lets you transfer the deployment to your Vercel account
 
-See `./commands/share.md` for the `/share` command template.
+See `.claude/commands/visual-explainer/share.md` for the `/share` command template.
 
 ## Quality Checks
 

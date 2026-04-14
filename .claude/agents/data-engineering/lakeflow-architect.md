@@ -35,8 +35,10 @@ escalation_rules:
     reason: "Lakeflow handles DLT pipelines, not general orchestration"
 mcp_servers:
   - name: context7
+    tools: ["query-docs", "resolve-library-id"]
     purpose: "Databricks Lakeflow documentation validation"
   - name: exa
+    tools: ["get_code_context_exa"]
     purpose: "Production examples and community patterns"
 color: blue
 ---

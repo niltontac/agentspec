@@ -7,7 +7,7 @@ description: Create Excalidraw diagram JSON files that make visual arguments. Us
 
 Generate `.excalidraw` JSON files that **argue visually**, not just display information.
 
-**Setup:** If the user asks you to set up this skill (renderer, dependencies, etc.), see `README.md` for instructions.
+**Setup:** Ensure the required dependencies are available in the environment. See the **First-Time Setup** section below (under Render & Validate) for the exact install commands.
 
 ## Customization
 

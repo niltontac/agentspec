@@ -130,7 +130,7 @@
 |   +-- data-engineering/        # 15 DE implementation
 |   +-- dev/                     # 4 developer productivity
 |
-+-- kb/                          # 22 curated KB domains
++-- kb/                          # 23 curated KB domains
 |   +-- dbt/                     # dbt patterns
 |   +-- spark/                   # PySpark, Spark SQL
 |   +-- sql-patterns/            # SQL best practices
@@ -389,6 +389,6 @@
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 2.1.0 | 2026-03-26 | Updated folder structure for 58 agents, 8 categories, 22 KB domains |
+| 2.1.0 | 2026-03-26 | Updated folder structure for 58 agents, 8 categories, 23 KB domains |
 | 2.0.0 | 2026-03-26 | Data engineering pivot |
 | 1.0.0 | 2026-02-17 | Public release as AgentSpec v1.0.0 |

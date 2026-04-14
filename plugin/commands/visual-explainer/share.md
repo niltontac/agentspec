@@ -1,6 +1,12 @@
+---
+name: share
+description: Share a visual explainer HTML file instantly via Vercel — returns a live URL with no authentication required
+---
 # Share Visual Explainer Page
 
 Share a visual explainer HTML file instantly via Vercel. Returns a live URL with no authentication required.
+
+> **Note:** This command requires the `vercel` CLI. Install with `npm install -g vercel` if not already available.
 
 ## Usage
 

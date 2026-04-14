@@ -2,7 +2,7 @@
 
 **Spec-Driven Development for Data Engineering on Claude Code**
 
-58 agents | 22 KB domains | 29 commands | 4 skills | 5-phase SDD workflow
+58 agents | 23 KB domains | 29 commands | 4 skills | 5-phase SDD workflow
 
 ## Install
 
@@ -45,7 +45,7 @@ claude plugin install agentspec
 | Dev | 4 | codebase-explorer, prompt-crafter, meeting-analyst |
 | Test | 3 | test-generator, data-quality-analyst, data-contracts-engineer |
 
-### 22 Knowledge Base Domains
+### 23 Knowledge Base Domains
 
 dbt, Spark, Airflow, streaming, SQL patterns, data modeling, data quality, medallion, lakehouse, cloud platforms, AWS, GCP, Microsoft Fabric, Lakeflow, Terraform, AI data engineering, GenAI, prompt engineering, modern stack, Pydantic, Python, testing
 

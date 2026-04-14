@@ -13,7 +13,7 @@
 | **Project** | AgentSpec - Spec-Driven Development Framework |
 | **Tagline** | Spec-Driven Development for Data Engineering |
 | **Business Problem** | Gap between unstructured "vibe coding" and stale traditional specifications |
-| **Solution** | 5-phase workflow with 58 specialized AI agents, 22 KB domains, and 29 commands |
+| **Solution** | 5-phase workflow with 58 specialized AI agents, 23 KB domains, and 29 commands |
 | **Target Audience** | Data engineering teams using Claude Code |
 | **License** | MIT |
 
@@ -119,7 +119,7 @@ Traditional specs produce a task list. AgentSpec produces a **team assignment**.
                            +-------------------------------------+
                            |         .claude/kb/                 |
                            |  +------------------------------+   |
-                           |  |  22 curated KB domains       |   |
+                           |  |  23 curated KB domains       |   |
                            |  |  (dbt, Spark, Airflow, ...)  |   |
                            |  +------------------------------+   |
                            +------------------+------------------+
@@ -317,7 +317,7 @@ Design phase matches agents using these keywords:
 
 ## Knowledge Base Integration
 
-AgentSpec integrates deeply with 22 curated Knowledge Base domains:
+AgentSpec integrates deeply with 23 curated Knowledge Base domains:
 
 ### Available Domains
 
@@ -545,7 +545,7 @@ KB Domains:          ->    Read patterns:       ->    Agents consult:
 | Dimension | Without AgentSpec | With AgentSpec |
 |-----------|-------------------|----------------|
 | File placement | Random/guessed | Explicit in Technical Context |
-| Pattern consistency | Varies | KB-grounded (22 domains) |
+| Pattern consistency | Varies | KB-grounded (23 domains) |
 | Code ownership | Unclear | Agent attribution (58 agents) |
 | Traceability | None | Full artifact chain |
 | Specialist expertise | None | Automatic matching |
@@ -756,7 +756,7 @@ SCHEMA GOVERNANCE
 | Templates | `.claude/sdd/templates/` |
 | Archive | `.claude/sdd/archive/` |
 | Agents (58) | `.claude/agents/` |
-| Knowledge Base (22) | `.claude/kb/` |
+| Knowledge Base (23) | `.claude/kb/` |
 | SDD Commands | `.claude/commands/workflow/` |
 | DE Commands | `.claude/commands/data-engineering/` |
 | Core Commands | `.claude/commands/core/` |
@@ -767,7 +767,7 @@ SCHEMA GOVERNANCE
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 2.1.0 | 2026-03-26 | Multi-cloud coverage: 58 agents across 8 categories, 22 KB domains |
+| 2.1.0 | 2026-03-26 | Multi-cloud coverage: 58 agents across 8 categories, 23 KB domains |
 | 2.0.0 | 2026-03-26 | Data engineering pivot: 11 KB domains, 11 DE agents, 8 DE commands |
 | 1.0.0 | 2026-02-17 | Public release as AgentSpec v1.0.0 with 16 agents |
 

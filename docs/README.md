@@ -14,13 +14,13 @@
 | Guide | Description |
 |-------|-------------|
 | [Tutorials](tutorials/) | dbt, star schema, data quality, Spark, streaming, RAG walkthroughs |
-| [Reference](reference/) | Full catalog: 58 agents, 29 commands, 22 KB domains, 2 skills |
+| [Reference](reference/) | Full catalog: 58 agents, 29 commands, 23 KB domains, 2 skills |
 
 ## Data Engineering Quick Links
 
 - [DE Commands](../.claude/commands/data-engineering/README.md) -- 8 data engineering slash commands
 - [DE Agents](../.claude/agents/data-engineering/) -- 15 specialist agents
-- [KB Domains](../.claude/kb/_index.yaml) -- 22 knowledge base domains
+- [KB Domains](../.claude/kb/_index.yaml) -- 23 knowledge base domains
 
 ## Framework Quick Links
 

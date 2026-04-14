@@ -4,6 +4,38 @@ All notable changes to AgentSpec will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [3.1.0] - 2026-04-14
+
+### Added
+
+- **New KB domain: `supabase/`** — dedicated knowledge base with 4 concepts (pgvector-fundamentals, rls-policies, edge-functions, realtime) and 3 patterns (rag-vector-store, multi-tenant-rls, webhook-edge-function)
+- New KB concepts for `lakeflow/`: expectations-model, cdc-fundamentals, deployment-model (now 5 concepts, within 3-6 spec)
+- New KB file: `aws/quick-reference.md` — consolidated Lambda + Deployment cheat sheet
+- New file: `commands/visual-explainer/README.md` — documents all 8 visual-explainer commands
+- Plugin-only skills (`sdd-workflow`, `data-engineering-guide`) documented in `docs/reference/README.md`
+- Vercel CLI prerequisite note in `/share` command
+
+### Fixed
+
+- **Critical:** 4 agents referenced non-existent KB domains in body text — `supabase-specialist` (supabase/), `qdrant-specialist` (qdrant/, n8n/), `ci-cd-specialist` (devops/), `ai-prompt-specialist-gcp` (gemini/, langfuse/) — all remapped to existing domains
+- **Critical:** `lakeflow-expert` dead reference to `08-operations/limitations.md` → corrected to `reference/limitations.md`
+- Dead `README.md` reference in `excalidraw-diagram/SKILL.md` — replaced with inline setup pointer
+- Dead `./commands/` references in `visual-explainer/SKILL.md` — corrected to `.claude/commands/visual-explainer/`
+- Malformed `mcp_servers` frontmatter in `llm-specialist.md` — reformatted to proper YAML objects with `tools:` field
+- Missing `tools:` field in `mcp_servers` for 3 lakeflow T3 agents (lakeflow-architect, lakeflow-pipeline-builder, lakeflow-expert)
+- `spark-specialist` → `spark-engineer` in `docs/concepts/README.md` build delegation
+- Code of Conduct entry in CHANGELOG v1.0.0 clarified as "referenced in CONTRIBUTING.md"
+- `/share` command added to README Visual & Utilities table
+
+### Changed
+
+- KB domain count: 22 → 23 (added `supabase/`) — updated across all docs, SDD files, agents README, CLAUDE.md, README.md, and WORKFLOW_CONTRACTS.yaml
+- `WORKFLOW_CONTRACTS.yaml` version bumped from 2.1.0 → 3.0.0
+- `_index.yaml` version bumped to 2.2, supabase domain registered
+- `supabase-specialist` agent now uses dedicated `supabase/` KB domain instead of `ai-data-engineering/` (semantically correct)
+- Skills section in `docs/reference/README.md` updated to "2 core + 2 plugin-only" with plugin-only skills documented
+- Plugin rebuilt with all fixes — 58 agents, 29 commands, 23 KB domains, 4 skills
+
 ## [3.0.0] - 2026-03-29
 
 ### Added
@@ -142,6 +174,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - README with quick start guide
 - CONTRIBUTING guidelines
-- Code of Conduct
+- Code of Conduct (referenced in CONTRIBUTING.md)
 - Agent reference documentation
 - KB framework guide

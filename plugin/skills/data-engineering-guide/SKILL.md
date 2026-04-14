@@ -9,7 +9,7 @@ description: |
 
 # Data Engineering Guide
 
-You have access to 22 specialized knowledge base domains and 15+ data engineering agents. Route the user to the right tool based on their task.
+You have access to 23 specialized knowledge base domains and 15+ data engineering agents. Route the user to the right tool based on their task.
 
 ## Quick Routing
 

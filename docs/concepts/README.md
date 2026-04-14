@@ -61,11 +61,11 @@ Brainstorm is optional. You can start directly with `/define` if requirements ar
 | **Data Engineering** | 15 | dbt, Spark, Airflow, Flink, Lakeflow, SQL, streaming |
 | **Dev** | 4 | Developer productivity (codebase explorer, prompt crafter, shell scripts) |
 
-During `/build`, the build-agent delegates to DE specialists: dbt models go to `dbt-specialist`, Spark jobs to `spark-specialist`, quality checks to `data-quality-analyst`, pipeline DAGs to `airflow-specialist`, and streaming workloads to `spark-streaming-architect`.
+During `/build`, the build-agent delegates to DE specialists: dbt models go to `dbt-specialist`, Spark jobs to `spark-engineer`, quality checks to `data-quality-analyst`, pipeline DAGs to `airflow-specialist`, and streaming workloads to `spark-streaming-architect`.
 
 ### 3. Knowledge Base (the memory)
 
-22 KB domains ground agent responses in verified patterns instead of hallucinated SQL:
+23 KB domains ground agent responses in verified patterns instead of hallucinated SQL:
 
 | Domain | Topics |
 |--------|--------|

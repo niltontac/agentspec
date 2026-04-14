@@ -1,6 +1,12 @@
+---
+name: share
+description: Share a visual explainer HTML file instantly via Vercel — returns a live URL with no authentication required
+---
 # Share Visual Explainer Page
 
 Share a visual explainer HTML file instantly via Vercel. Returns a live URL with no authentication required.
+
+> **Note:** This command requires the `vercel` CLI. Install with `npm install -g vercel` if not already available.
 
 ## Usage
 
@@ -32,7 +38,7 @@ No Vercel account, Cloudflare account, or API keys needed. The deployment is "cl
 ## Script Location
 
 ```bash
-bash /Users/luanmorenomaciel/GitHub/agentspec/.claude/skills/visual-explainer/scripts/share.sh <file>
+bash .claude/skills/visual-explainer/scripts/share.sh <file>
 ```
 
 ## Output

@@ -145,7 +145,7 @@ TYPE: [ ] CRITICAL  [ ] IMPORTANT  [ ] STANDARD  [ ] ADVISORY
 THRESHOLD: _____
 
 VALIDATION
-+-- KB: .claude/kb/qdrant/_______________
++-- KB: .claude/kb/ai-data-engineering/_______________
 |     Result: [ ] FOUND  [ ] NOT FOUND
 |     Summary: ________________________________
 |
@@ -179,8 +179,8 @@ Load context based on task needs. Skip what is not relevant.
 | Context Source | When to Load | Skip If |
 |----------------|--------------|---------|
 | `.claude/CLAUDE.md` | Always recommended | Task is trivial |
-| `.claude/kb/qdrant/` | Any Qdrant task | Domain not applicable |
-| `.claude/kb/n8n/` | n8n integration tasks | Pure API work |
+| `.claude/kb/ai-data-engineering/` | Any Qdrant task | Domain not applicable |
+| `.claude/kb/genai/` | n8n integration tasks | Pure API work |
 | `.claude/kb/genai/` | RAG architecture design | Simple CRUD operations |
 | Existing n8n workflow JSON | Modifying workflow | New workflow |
 | Qdrant Cloud dashboard | Credential or cluster tasks | Self-hosted instance |
@@ -204,13 +204,15 @@ What Qdrant task?
 ### Primary: Internal KB
 
 ```text
-.claude/kb/qdrant/
+.claude/kb/ai-data-engineering/
 +-- index.md                    # Entry point, navigation (max 100 lines)
-+-- quick-reference.md          # REST API, n8n node config (max 100 lines)
++-- quick-reference.md          # Fast lookup (max 100 lines)
 +-- concepts/                   # Atomic definitions (max 150 lines each)
-|   +-- collections-and-points.md
+|   +-- vector-databases.md
+|   +-- rag-pipelines.md
 +-- patterns/                   # Reusable code patterns (max 200 lines each)
-    +-- n8n-rag-pipeline.md
+    +-- vector-db-operations.md
+    +-- rag-pipeline-implementation.md
 ```
 
 ### Secondary: MCP Validation & Documentation
@@ -272,7 +274,7 @@ curl -X PUT -H "api-key: $QDRANT_API_KEY" -H "Content-Type: application/json" \
 **When:** Creating, configuring, or deleting Qdrant collections, setting up vector dimensions, distance metrics, quantization, or indexes
 
 **Process:**
-1. Load KB: `.claude/kb/qdrant/concepts/collections-and-points.md`
+1. Load KB: `.claude/kb/ai-data-engineering/concepts/vector-databases.md`
 2. Determine vector dimensions (match embedding model output)
 3. Choose distance metric (Cosine for text embeddings, Euclidean for images)
 4. Configure quantization if dataset > 100k points
@@ -316,7 +318,7 @@ curl -X PUT -H "api-key: $QDRANT_API_KEY" -H "Content-Type: application/json" \
 **When:** Inserting vectors with payloads, performing similarity search with filtering, or deleting points by ID or filter
 
 **Process:**
-1. Load KB: `.claude/kb/qdrant/quick-reference.md`
+1. Load KB: `.claude/kb/ai-data-engineering/quick-reference.md`
 2. For upsert: validate vector dimensions match collection config
 3. For search: construct filter clause, set score threshold, choose limit
 4. For delete: use filter-based deletion (safer than ID-based for bulk ops)
@@ -365,8 +367,8 @@ curl -X PUT -H "api-key: $QDRANT_API_KEY" -H "Content-Type: application/json" \
 **When:** Configuring Qdrant Vector Store nodes in n8n workflows, setting up AI Agent tool connections, or building ingestion pipelines
 
 **Process:**
-1. Load KB: `.claude/kb/qdrant/patterns/n8n-rag-pipeline.md`
-2. Load KB: `.claude/kb/n8n/concepts/ai-agent-node.md`
+1. Load KB: `.claude/kb/ai-data-engineering/patterns/rag-pipeline-implementation.md`
+2. Load KB: `.claude/kb/genai/concepts/multi-agent-systems.md`
 3. Configure Qdrant credential (`qdrantApi` type: URL + API key)
 4. Choose operation mode: Insert, Retrieve, or Tool (for AI Agent)
 5. Connect embeddings sub-node (OpenAI, or other provider)
@@ -400,7 +402,7 @@ curl -X PUT -H "api-key: $QDRANT_API_KEY" -H "Content-Type: application/json" \
 **When:** Designing end-to-end RAG architectures using Qdrant as the vector store, including ingestion, retrieval, and response generation
 
 **Process:**
-1. Load KB: `.claude/kb/qdrant/patterns/n8n-rag-pipeline.md`
+1. Load KB: `.claude/kb/ai-data-engineering/patterns/rag-pipeline-implementation.md`
 2. Load KB: `.claude/kb/genai/concepts/rag-architecture.md`
 3. Design ingestion pipeline (chunking strategy, embedding model, batch size)
 4. Design retrieval pipeline (search params, score threshold, top-K)
@@ -590,8 +592,8 @@ This agent can be extended by:
 | Extension | How to Add |
 |-----------|------------|
 | New capability | Add section under Capabilities |
-| New KB concept | Create `.claude/kb/qdrant/concepts/{name}.md` |
-| New KB pattern | Create `.claude/kb/qdrant/patterns/{name}.md` |
+| New KB concept | Create `.claude/kb/ai-data-engineering/concepts/{name}.md` |
+| New KB pattern | Create `.claude/kb/ai-data-engineering/patterns/{name}.md` |
 | Custom thresholds | Override in Task Thresholds section |
 | Additional MCP sources | Add to Knowledge Sources section |
 | Project-specific context | Add to Context Loading table |

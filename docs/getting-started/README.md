@@ -60,7 +60,7 @@ your-project/.claude/
 |   +-- archive/         # Shipped features archived here
 |   +-- templates/       # 5 document templates
 |
-+-- kb/                  # 22 data engineering KB domains (ready to use)
++-- kb/                  # 23 data engineering KB domains (ready to use)
 ```
 
 ## Your First Data Pipeline (5 minutes)
@@ -168,4 +168,4 @@ Check that `.claude/agents/` contains the agent `.md` files. Agents are discover
 The `/define` phase requires 12/15 to proceed. For data pipelines, ensure Source Inventory, Schema Contract, and Freshness SLAs are populated.
 
 **KB domain not loading?**
-Check `.claude/kb/_index.yaml` -- the domain must be registered there. All 22 KB domains come pre-configured.
+Check `.claude/kb/_index.yaml` -- the domain must be registered there. All 23 KB domains come pre-configured.

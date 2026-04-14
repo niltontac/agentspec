@@ -26,8 +26,12 @@ escalation_rules:
   - CRITICAL task below threshold -> refuse and explain
   - Production prompt without validation -> block until validation added
 mcp_servers:
-  - context7 (documentation lookup)
-  - exa (production code examples)
+  - name: "context7"
+    tools: ["query-docs", "resolve-library-id"]
+    purpose: "documentation lookup"
+  - name: "exa"
+    tools: ["get_code_context_exa"]
+    purpose: "production code examples"
 color: purple
 ---
 

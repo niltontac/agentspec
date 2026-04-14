@@ -1,8 +1,8 @@
 # Knowledge Base Index
 # Machine-readable registry for KB domains
 
-version: "2.1"
-last_updated: "2026-03-26"
+version: "2.2"
+last_updated: "2026-04-14"
 
 # File Size Limits (SINGLE SOURCE OF TRUTH)
 limits:
@@ -35,7 +35,7 @@ shared:
     path: shared/anti-patterns.md
     description: "Cross-agent anti-pattern library referenced by all data engineering agents"
 
-# Domain Registry — 22 Domains
+# Domain Registry — 23 Domains
 domains:
 
   # ─── Core Data Engineering ─────────────────────────────────────────
@@ -1054,3 +1054,37 @@ domains:
       - name: remote-state
         path: patterns/remote-state.md
         confidence: 0.90
+
+  # ─── Backend-as-a-Service ──────────────────────────────────────────────
+
+  supabase:
+    name: supabase
+    description: "Supabase development -- pgvector, RLS policies, Edge Functions, Auth, Realtime, migrations"
+    path: supabase/
+    mcp_validated: "2026-04-14"
+    entry_points:
+      index: index.md
+      quick_reference: quick-reference.md
+    concepts:
+      - name: pgvector-fundamentals
+        path: concepts/pgvector-fundamentals.md
+        confidence: 0.95
+      - name: rls-policies
+        path: concepts/rls-policies.md
+        confidence: 0.95
+      - name: edge-functions
+        path: concepts/edge-functions.md
+        confidence: 0.95
+      - name: realtime
+        path: concepts/realtime.md
+        confidence: 0.95
+    patterns:
+      - name: rag-vector-store
+        path: patterns/rag-vector-store.md
+        confidence: 0.95
+      - name: multi-tenant-rls
+        path: patterns/multi-tenant-rls.md
+        confidence: 0.95
+      - name: webhook-edge-function
+        path: patterns/webhook-edge-function.md
+        confidence: 0.95

@@ -276,7 +276,7 @@ All templates live in `.claude/kb/_templates/`:
 
 ---
 
-## Skills (2 total)
+## Skills (2 core + 2 plugin-only)
 
 Skills are reusable capability packs in `.claude/skills/` that provide templates, references, and scripts for specialized generation tasks.
 
@@ -284,6 +284,15 @@ Skills are reusable capability packs in `.claude/skills/` that provide templates
 |-------|-------------|----------|
 | `visual-explainer` | Self-contained HTML pages for diagrams, slides, reviews, and recaps | 8 visual-explainer commands |
 | `excalidraw-diagram` | Excalidraw JSON files for workflow and architecture visualization | Invoked directly |
+
+### Plugin-Only Skills
+
+These skills are bundled in the distributed plugin (`plugin/skills/`) but are not part of the `.claude/` source tree. They are merged in by `build-plugin.sh`.
+
+| Skill | Description |
+|-------|-------------|
+| `sdd-workflow` | Spec-Driven Development workflow guidance for structured feature development. Proactively guides through the 5-phase SDD workflow: Brainstorm → Define → Design → Build → Ship. |
+| `data-engineering-guide` | Data engineering expertise for pipelines, schemas, data quality, SQL, lakehouse, and streaming. Routes users to the right command and agent based on their task, backed by 23 KB domains. |
 
 ---
 

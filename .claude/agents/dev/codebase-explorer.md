@@ -26,7 +26,7 @@ escalation_rules:
     target: "python-developer"
     reason: "Explorer is read-only analysis; developers modify code"
   - trigger: "Architecture redesign recommendations"
-    target: "solution-architect"
+    target: "the-planner"
     reason: "Explorer identifies issues; architects design solutions"
 ---
 

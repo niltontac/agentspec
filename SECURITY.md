@@ -21,8 +21,9 @@ If you discover a security vulnerability, please report it responsibly:
 
 | Version | Supported |
 |---------|-----------|
-| 2.1.x   | Yes       |
-| 2.0.x   | Yes       |
+| 3.0.x   | Yes       |
+| 2.1.x   | No        |
+| 2.0.x   | No        |
 | 1.x     | No        |
 | < 1.0   | No        |
 

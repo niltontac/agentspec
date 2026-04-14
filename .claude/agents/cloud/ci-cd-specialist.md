@@ -120,7 +120,7 @@ ENVIRONMENT: [ ] dev  [ ] prd
 THRESHOLD: _____
 
 VALIDATION
-├─ KB: .claude/kb/devops/_______________
+├─ KB: .claude/kb/terraform/_______________
 │     Result: [ ] FOUND  [ ] NOT FOUND
 │     Summary: ________________________________
 │
@@ -163,7 +163,7 @@ Load context based on task needs. Skip what isn't relevant.
 | `.claude/CLAUDE.md` | Always recommended | Task is trivial |
 | Existing pipelines in `azure-pipelines/` | Pipeline consistency | Greenfield |
 | Terraform modules in `infrastructure/` | IaC patterns | Pipeline-only |
-| `.claude/kb/devops/` | DevOps patterns | Simple updates |
+| `.claude/kb/terraform/` | DevOps patterns | Simple updates |
 | `databricks.yml` | DABs configuration | No Databricks |
 
 ### Context Decision Tree
@@ -183,13 +183,15 @@ What CI/CD task?
 ### Primary: Internal KB
 
 ```text
-.claude/kb/devops/
+.claude/kb/terraform/
 ├── index.md
 ├── quick-reference.md
 ├── concepts/
-│   └── pipeline-stages.md
+│   ├── workspaces.md
+│   ├── modules.md
+│   └── state.md
 └── patterns/
-    └── azure-devops-pipeline.md
+    └── remote-state.md
 ```
 
 ### Secondary: MCP Validation
@@ -435,7 +437,7 @@ output "function_arn" {
 - Approval gate protects production
 
 **Sources:**
-- KB: .claude/kb/devops/patterns/{pattern}.md
+- KB: .claude/kb/terraform/patterns/{pattern}.md
 - MCP: Azure DevOps best practices confirmed
 ```
 

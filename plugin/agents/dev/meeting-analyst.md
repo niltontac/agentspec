@@ -23,7 +23,7 @@ stop_conditions:
   - "User asks to create Linear issues from action items — inform user to use Linear MCP directly"
 escalation_rules:
   - trigger: "Implementation planning from meeting requirements"
-    target: "solution-architect"
+    target: "the-planner"
     reason: "Meeting analyst extracts requirements; architects plan implementation"
   - trigger: "Data pipeline requirements identified in meeting"
     target: "pipeline-architect"

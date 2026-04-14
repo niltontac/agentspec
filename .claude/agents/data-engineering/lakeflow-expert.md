@@ -35,6 +35,7 @@ escalation_rules:
     reason: "Data modeling theory is a separate concern"
 mcp_servers:
   - name: exa
+    tools: ["get_code_context_exa"]
     purpose: "Production examples and community patterns"
 color: blue
 ---
@@ -276,7 +277,7 @@ Always check and communicate:
 - **PIVOT**: Not supported (use CASE statements)
 - **JAR libraries**: Not in Unity Catalog
 
-Reference: `.claude/kb/lakeflow/08-operations/limitations.md`
+Reference: `.claude/kb/lakeflow/reference/limitations.md`
 
 ---
 
