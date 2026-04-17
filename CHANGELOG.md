@@ -4,10 +4,13 @@ All notable changes to AgentSpec will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [3.1.0] - 2026-04-14
+## [3.1.0] - 2026-04-17
 
 ### Added
 
+- **New skill: `agent-router`** — intelligent routing table that maps file patterns, intent keywords, and domain context to all 58 agents. Includes model cost optimization strategy (Haiku 70% / Sonnet 20% / Opus 10%) and serial/parallel composition hints
+- **New command: `/status`** — comprehensive project status report scanning SDD workspace, git state, codebase health (tests, TODOs, docs), and generating actionable recommendations with suggested next commands
+- **Stack auto-detection in `init-workspace.sh`** — SessionStart hook now detects 10+ technology stacks (dbt, Lakeflow, Lambda, Airflow, Supabase, Terraform, Spark, Streaming, Fabric, Data Quality) and generates `.detected-stack.md` with recommended KB domains, agents, and commands
 - **New KB domain: `supabase/`** — dedicated knowledge base with 4 concepts (pgvector-fundamentals, rls-policies, edge-functions, realtime) and 3 patterns (rag-vector-store, multi-tenant-rls, webhook-edge-function)
 - New KB concepts for `lakeflow/`: expectations-model, cdc-fundamentals, deployment-model (now 5 concepts, within 3-6 spec)
 - New KB file: `aws/quick-reference.md` — consolidated Lambda + Deployment cheat sheet
@@ -29,12 +32,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+- Command count: 29 → 30 (added `/status`)
+- Skill count: 4 → 5 (added `agent-router`)
 - KB domain count: 22 → 23 (added `supabase/`) — updated across all docs, SDD files, agents README, CLAUDE.md, README.md, and WORKFLOW_CONTRACTS.yaml
 - `WORKFLOW_CONTRACTS.yaml` version bumped from 2.1.0 → 3.0.0
 - `_index.yaml` version bumped to 2.2, supabase domain registered
 - `supabase-specialist` agent now uses dedicated `supabase/` KB domain instead of `ai-data-engineering/` (semantically correct)
 - Skills section in `docs/reference/README.md` updated to "2 core + 2 plugin-only" with plugin-only skills documented
-- Plugin rebuilt with all fixes — 58 agents, 29 commands, 23 KB domains, 4 skills
+- Plugin rebuilt — 58 agents, 30 commands, 5 skills, 23 KB domains
 
 ## [3.0.0] - 2026-03-29
 
